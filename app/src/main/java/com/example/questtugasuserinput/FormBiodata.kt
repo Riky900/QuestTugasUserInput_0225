@@ -165,6 +165,21 @@ fun FormBiodataScreen() {
                         .padding(dimensionResource(R.dimen.bio_content_padding)),
                     verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.bio_spacing))
                 ) {
+                    Text(
+                        text = stringResource(R.string.bio_form_title),
+                        color = colorResource(R.color.bio_purple),
+                        fontSize = spRes(R.dimen.bio_text_title),
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    Text(
+                        text = stringResource(R.string.bio_form_subtitle),
+                        color = colorResource(R.color.bio_text_gray),
+                        fontSize = spRes(R.dimen.bio_text_subtitle),
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
         }
