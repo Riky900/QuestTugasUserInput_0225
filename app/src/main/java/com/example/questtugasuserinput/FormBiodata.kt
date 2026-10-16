@@ -305,6 +305,27 @@ fun FormBiodataScreen() {
                             }
                         }
                     }
+
+                    Button(
+                        onClick = { showSummary = true },
+                        enabled = formComplete,
+                        shape = RoundedCornerShape(dimensionResource(R.dimen.bio_button_radius)),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(R.color.bio_purple),
+                            contentColor = colorResource(R.color.bio_white),
+                            disabledContainerColor = colorResource(R.color.bio_button_disabled),
+                            disabledContentColor = colorResource(R.color.bio_white)
+                        ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(dimensionResource(R.dimen.bio_button_height))
+                    ) {
+                        Text(
+                            text = stringResource(R.string.bio_button_proceed),
+                            fontSize = spRes(R.dimen.bio_text_button),
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
                 }
             }
         }
