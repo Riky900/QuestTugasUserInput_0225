@@ -140,6 +140,12 @@ fun FormBiodataScreen() {
                     .fillMaxWidth()
                     .height(dimensionResource(R.dimen.bio_header_height))
             )
+
+            PagerDots(
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(dimensionResource(R.dimen.bio_dot_padding))
+            )
         }
     }
 }
