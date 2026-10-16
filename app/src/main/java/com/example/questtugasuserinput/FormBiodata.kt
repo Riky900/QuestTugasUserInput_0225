@@ -68,3 +68,14 @@ private fun formatDate(millis: Long, pattern: String): String {
     sdf.timeZone = TimeZone.getTimeZone("UTC")
     return sdf.format(Date(millis))
 }
+
+@Composable
+private fun fieldColors() = OutlinedTextFieldDefaults.colors(
+    focusedBorderColor = colorResource(R.color.bio_purple),
+    unfocusedBorderColor = colorResource(R.color.bio_field_border),
+    focusedTextColor = colorResource(R.color.bio_text_dark),
+    unfocusedTextColor = colorResource(R.color.bio_text_dark),
+    focusedPlaceholderColor = colorResource(R.color.bio_text_dark),
+    unfocusedPlaceholderColor = colorResource(R.color.bio_text_dark),
+    cursorColor = colorResource(R.color.bio_purple)
+)
