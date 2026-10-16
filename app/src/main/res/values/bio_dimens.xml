@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bio_header_height">260dp</dimen>
+    <dimen name="bio_card_top_margin">200dp</dimen>
+    <dimen name="bio_card_radius">32dp</dimen>
+    <dimen name="bio_card_elevation">8dp</dimen>
+    <dimen name="bio_content_padding">24dp</dimen>
+    <dimen name="bio_field_radius">20dp</dimen>
+</resources>
