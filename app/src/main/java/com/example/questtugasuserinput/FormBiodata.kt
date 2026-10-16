@@ -58,3 +58,13 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
+
+@Composable
+private fun spRes(id: Int): TextUnit =
+    with(LocalDensity.current) { dimensionResource(id).toSp() }
+
+private fun formatDate(millis: Long, pattern: String): String {
+    val sdf = SimpleDateFormat(pattern, Locale.getDefault())
+    sdf.timeZone = TimeZone.getTimeZone("UTC")
+    return sdf.format(Date(millis))
+}
