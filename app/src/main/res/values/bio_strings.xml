@@ -13,4 +13,12 @@
     <string name="bio_skill_web">Web</string>
     <string name="bio_button_proceed">Proceed</string>
     <string name="bio_date_pattern">dd/MM/yyyy</string>
+    <string name="bio_ok">OK</string>
+    <string name="bio_cancel">Batal</string>
+    <string name="bio_summary_title">Data Anda</string>
+    <string name="bio_summary_format">Nama: %1$s %2$s\nEmail: %3$s\nTgl Lahir: %4$s\nExperience: %5$s\nSkill: %6$s</string>
+    <string name="bio_separator">, </string>
+    <string name="bio_desc_header_image">Gambar header</string>
+    <string name="bio_desc_calendar">Pilih tanggal</string>
+    <string name="bio_desc_dropdown">Buka pilihan</string>
 </resources>
