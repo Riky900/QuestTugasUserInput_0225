@@ -146,6 +146,20 @@ fun FormBiodataScreen() {
                     .align(Alignment.TopStart)
                     .padding(dimensionResource(R.dimen.bio_dot_padding))
             )
+
+            // Box/Surface form yang mengapung di atas Scaffold
+            Surface(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = dimensionResource(R.dimen.bio_card_top_margin)),
+                shape = RoundedCornerShape(
+                    topStart = dimensionResource(R.dimen.bio_card_radius),
+                    topEnd = dimensionResource(R.dimen.bio_card_radius)
+                ),
+                color = colorResource(R.color.bio_white),
+                shadowElevation = dimensionResource(R.dimen.bio_card_elevation)
+            ) {
+            }
         }
     }
 }
