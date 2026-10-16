@@ -5,4 +5,8 @@
     <color name="bio_scaffold_bg">#FFFBFE</color>
     <color name="bio_text_dark">#FF1C1B1F</color>
     <color name="bio_text_gray">#FF757575</color>
+    <color name="bio_field_border">#FF79747E</color>
+    <color name="bio_button_disabled">#FFE0E0E0</color>
+    <color name="bio_dot_active">#FF2962FF</color>
+    <color name="bio_dot_inactive">#FF757575</color>
 </resources>
