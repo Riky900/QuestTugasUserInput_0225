@@ -7,4 +7,10 @@
     <string name="bio_hint_email">Email</string>
     <string name="bio_hint_birth_date">Tgl Lahir</string>
     <string name="bio_hint_experience">Experience</string>
+    <string name="bio_label_skill">Pilih Skill Anda :</string>
+    <string name="bio_skill_android">Android</string>
+    <string name="bio_skill_uiux">UI/UX</string>
+    <string name="bio_skill_web">Web</string>
+    <string name="bio_button_proceed">Proceed</string>
+    <string name="bio_date_pattern">dd/MM/yyyy</string>
 </resources>
