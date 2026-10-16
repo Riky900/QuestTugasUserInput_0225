@@ -349,4 +349,26 @@ fun FormBiodataScreen() {
             DatePicker(state = datePickerState)
         }
     }
+
+    if (showSummary) {
+        val skillNames = skills.filter { it in selectedSkills }.map { stringResource(it) }
+        AlertDialog(
+            onDismissRequest = { showSummary = false },
+            title = { Text(stringResource(R.string.bio_summary_title)) },
+            text = {
+                Text(
+                    stringResource(
+                        R.string.bio_summary_format,
+                        namaDepan, namaBelakang, email, tglLahir, pengalaman,
+                        skillNames.joinToString(stringResource(R.string.bio_separator))
+                    )
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = { showSummary = false }) {
+                    Text(stringResource(R.string.bio_ok))
+                }
+            }
+        )
+    }
 }
