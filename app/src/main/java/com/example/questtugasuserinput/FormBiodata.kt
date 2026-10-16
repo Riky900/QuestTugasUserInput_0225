@@ -274,6 +274,37 @@ fun FormBiodataScreen() {
                             }
                         }
                     }
+
+                    Text(
+                        text = stringResource(R.string.bio_label_skill),
+                        color = colorResource(R.color.bio_text_dark),
+                        fontSize = spRes(R.dimen.bio_text_label),
+                        fontWeight = FontWeight.Bold
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        skills.forEach { skillId ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Checkbox(
+                                    checked = skillId in selectedSkills,
+                                    onCheckedChange = { checked ->
+                                        if (checked) selectedSkills.add(skillId)
+                                        else selectedSkills.remove(skillId)
+                                    },
+                                    colors = CheckboxDefaults.colors(
+                                        checkedColor = colorResource(R.color.bio_purple)
+                                    )
+                                )
+                                Text(
+                                    text = stringResource(skillId),
+                                    color = colorResource(R.color.bio_text_dark),
+                                    fontSize = spRes(R.dimen.bio_text_skill)
+                                )
+                            }
+                        }
+                    }
                 }
             }
         }
