@@ -236,6 +236,43 @@ fun FormBiodataScreen() {
                                     .clickable { showDatePicker = true }
                             )
                         }
+                        Box(modifier = Modifier.weight(1f)) {
+                            OutlinedTextField(
+                                value = pengalaman,
+                                onValueChange = {},
+                                readOnly = true,
+                                placeholder = { Text(stringResource(R.string.bio_hint_experience)) },
+                                trailingIcon = {
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_arrow_drop_down),
+                                        contentDescription = stringResource(R.string.bio_desc_dropdown)
+                                    )
+                                },
+                                singleLine = true,
+                                shape = fieldShape,
+                                colors = fieldColors(),
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .matchParentSize()
+                                    .clickable { showMenu = true }
+                            )
+                            DropdownMenu(
+                                expanded = showMenu,
+                                onDismissRequest = { showMenu = false }
+                            ) {
+                                experienceOptions.forEach { option ->
+                                    DropdownMenuItem(
+                                        text = { Text(option) },
+                                        onClick = {
+                                            pengalaman = option
+                                            showMenu = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
