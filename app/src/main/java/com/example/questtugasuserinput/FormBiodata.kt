@@ -102,3 +102,27 @@ private fun PagerDots(modifier: Modifier = Modifier) {
         }
     }
 }
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormBiodataScreen() {
+    var namaDepan by remember { mutableStateOf("") }
+    var namaBelakang by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var tglLahir by remember { mutableStateOf("") }
+    var pengalaman by remember { mutableStateOf("") }
+    var showDatePicker by remember { mutableStateOf(false) }
+    var showMenu by remember { mutableStateOf(false) }
+    var showSummary by remember { mutableStateOf(false) }
+
+    val skills = listOf(R.string.bio_skill_android, R.string.bio_skill_uiux, R.string.bio_skill_web)
+    val selectedSkills = remember { mutableStateListOf<Int>() }
+    val experienceOptions = stringArrayResource(R.array.bio_experience_options)
+    val datePattern = stringResource(R.string.bio_date_pattern)
+    val datePickerState = rememberDatePickerState()
+
+    val fieldShape = RoundedCornerShape(dimensionResource(R.dimen.bio_field_radius))
+    val formComplete = namaDepan.isNotBlank() && namaBelakang.isNotBlank() &&
+            email.isNotBlank() && tglLahir.isNotBlank() &&
+            pengalaman.isNotBlank() && selectedSkills.isNotEmpty()
+}
