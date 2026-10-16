@@ -79,3 +79,26 @@ private fun fieldColors() = OutlinedTextFieldDefaults.colors(
     unfocusedPlaceholderColor = colorResource(R.color.bio_text_dark),
     cursorColor = colorResource(R.color.bio_purple)
 )
+
+@Composable
+private fun PagerDots(modifier: Modifier = Modifier) {
+    val total = integerResource(R.integer.bio_dot_count)
+    val active = integerResource(R.integer.bio_dot_active_index)
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.bio_dot_spacing))
+    ) {
+        repeat(total) { index ->
+            Box(
+                modifier = Modifier
+                    .size(dimensionResource(R.dimen.bio_dot_size))
+                    .clip(CircleShape)
+                    .background(
+                        colorResource(
+                            if (index == active) R.color.bio_dot_active else R.color.bio_dot_inactive
+                        )
+                    )
+            )
+        }
+    }
+}
