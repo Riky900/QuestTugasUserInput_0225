@@ -201,6 +201,16 @@ fun FormBiodataScreen() {
                             modifier = Modifier.weight(1f)
                         )
                     }
+
+                    OutlinedTextField(
+                        value = email,
+                        onValueChange = { email = it },
+                        placeholder = { Text(stringResource(R.string.bio_hint_email)) },
+                        singleLine = true,
+                        shape = fieldShape,
+                        colors = fieldColors(),
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
         }
