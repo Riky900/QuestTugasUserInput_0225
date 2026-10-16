@@ -6,4 +6,10 @@
     <dimen name="bio_card_elevation">8dp</dimen>
     <dimen name="bio_content_padding">24dp</dimen>
     <dimen name="bio_field_radius">20dp</dimen>
+    <dimen name="bio_spacing_small">8dp</dimen>
+    <dimen name="bio_spacing">16dp</dimen>
+    <dimen name="bio_spacing_large">24dp</dimen>
+    <dimen name="bio_button_height">56dp</dimen>
+    <dimen name="bio_button_radius">20dp</dimen>
+    <dimen name="bio_dot_size">10dp</dimen>
 </resources>
