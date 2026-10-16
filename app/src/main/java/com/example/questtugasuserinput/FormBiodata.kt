@@ -159,6 +159,13 @@ fun FormBiodataScreen() {
                 color = colorResource(R.color.bio_white),
                 shadowElevation = dimensionResource(R.dimen.bio_card_elevation)
             ) {
+                Column(
+                    modifier = Modifier
+                        .verticalScroll(rememberScrollState())
+                        .padding(dimensionResource(R.dimen.bio_content_padding)),
+                    verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.bio_spacing))
+                ) {
+                }
             }
         }
     }
