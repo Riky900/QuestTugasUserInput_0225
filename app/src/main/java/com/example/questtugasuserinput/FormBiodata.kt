@@ -180,6 +180,27 @@ fun FormBiodataScreen() {
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
+
+                    Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.bio_spacing))) {
+                        OutlinedTextField(
+                            value = namaDepan,
+                            onValueChange = { namaDepan = it },
+                            placeholder = { Text(stringResource(R.string.bio_hint_first_name)) },
+                            singleLine = true,
+                            shape = fieldShape,
+                            colors = fieldColors(),
+                            modifier = Modifier.weight(1f)
+                        )
+                        OutlinedTextField(
+                            value = namaBelakang,
+                            onValueChange = { namaBelakang = it },
+                            placeholder = { Text(stringResource(R.string.bio_hint_last_name)) },
+                            singleLine = true,
+                            shape = fieldShape,
+                            colors = fieldColors(),
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
                 }
             }
         }
