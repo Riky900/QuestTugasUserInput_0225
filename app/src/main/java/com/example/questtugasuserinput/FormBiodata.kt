@@ -211,6 +211,32 @@ fun FormBiodataScreen() {
                         colors = fieldColors(),
                         modifier = Modifier.fillMaxWidth()
                     )
+
+                    Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.bio_spacing))) {
+                        Box(modifier = Modifier.weight(1f)) {
+                            OutlinedTextField(
+                                value = tglLahir,
+                                onValueChange = {},
+                                readOnly = true,
+                                placeholder = { Text(stringResource(R.string.bio_hint_birth_date)) },
+                                trailingIcon = {
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_calendar),
+                                        contentDescription = stringResource(R.string.bio_desc_calendar)
+                                    )
+                                },
+                                singleLine = true,
+                                shape = fieldShape,
+                                colors = fieldColors(),
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .matchParentSize()
+                                    .clickable { showDatePicker = true }
+                            )
+                        }
+                    }
                 }
             }
         }
