@@ -125,4 +125,13 @@ fun FormBiodataScreen() {
     val formComplete = namaDepan.isNotBlank() && namaBelakang.isNotBlank() &&
             email.isNotBlank() && tglLahir.isNotBlank() &&
             pengalaman.isNotBlank() && selectedSkills.isNotEmpty()
+
+    Scaffold(containerColor = colorResource(R.color.bio_scaffold_bg)) { innerPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+        }
+    }
 }
